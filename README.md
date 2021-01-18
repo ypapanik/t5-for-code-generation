@@ -4,7 +4,7 @@ For more details, please refer to the relevant paper.
 
 ```
 @article{papanikolaou21,
-  title={Teach me how to Label: Labeling Functions fromNatural Language with Text-to-text Transformers},
+  title={Teach me how to Label: Labeling Functions from Natural Language with Text-to-text Transformers},
   author={Yannis Papanikolaou},
   journal={arXiv preprint arXiv:},
   year={2021}
@@ -12,12 +12,13 @@ For more details, please refer to the relevant paper.
 ```
 Along with our code we include the relevant datasets used in the paper. The CoNaLa dataset, as well as the evaluation script are taken from the CoNaLa project website:
 https://conala-corpus.github.io/
-#Finetuned models
+
+# Finetuned models
 You can find a t5-small and a t5-large model, both finetuned on CoNaLa (gold+noisy data) here:
  https://huggingface.co/yannis-papanikolaou/t5-code-generation
 
 
-#Results
+# Results
 You can reproduce results of the paper by downloading one of the above models and then run with:
 
 `PYTHONPATH=. python t5_experiments/scripts/train_predict.py --validation-file data/conala-test.json --language-model t5-small --model-dir <finetuned-model-dir>`
