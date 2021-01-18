@@ -1,0 +1,7 @@
+pandas
+transformers==3.1.0
+torch
+sklearn
+nltk
+astor
+sentencepiece==0.1.91

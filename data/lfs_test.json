@@ -1,0 +1,390 @@
+[
+  {
+    "intent": "Write me a function that checks if an input x contains first name. It should first make the text field of x as a string and then if the string is not empty it checks if the first letter is upper case and if the output of m.search_first_name when given the string is true. If yes, return PERSON_NAME otherwise return ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_contains_first_name(x):\n    temp = str(x.text)\n    if len(temp)>0:\n        if temp[0].isupper() & m.search_first_name(temp):\n            return PERSON_NAME\n        else:\n            return ABSTAIN\n    else:\n        return ABSTAIN"
+  },
+  {
+    "intent": "Return a label of SPAM if 'http' in comment text, otherwise ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_contains_link(x):\n    return SPAM if 'http' in x.text.lower() else ABSTAIN"
+  },
+  {
+    "intent": "Write a function that takes an input x and checks if the lowercased field of x contains middle or high school in which case it returns KID, otherwise ABSTAIN.",
+    "snippet": "@labeling_function()\ndef lf_contains_mid_high_school(x):\n    return KID if re.search('((high)|(middle)) school', x.msg.lower()) else ABSTAIN"
+  },
+  {
+    "intent": "Write a function contains parents that gets an input x and returns KID if either parents or family are in the lowercased msg field of x, otherwise return ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_contains_parents(x):\n    return KID if re.search('(parents)|(family)', x.msg.lower()) else ABSTAIN"
+  },
+  {
+    "intent": "A function that checks  ",
+    "snippet": "@labeling_function()\ndef lf_contains_quntity(x):\n    try:\n        x = str(x.text)\n        x = str.strip(x)\n        return NUMBER\n    except:\n        return ABSTAIN"
+  },
+  {
+    "intent": "check if the lowercased field msg of input x contains the word school in it. If yes return KID otherwise return ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_contains_school(x):\n    return KID if 'school' in x.msg.lower() else ABSTAIN"
+  },
+  {
+    "intent": "Write a function lf_contains_teen with argument x that will return KID if either the word teen or teenager is in the lowercased msg field of x otherwise return ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_contains_teen(x):\n    return KID if re.search('(teen)|(teenager)', x.msg.lower()) else ABSTAIN"
+  },
+  {
+    "intent": "a function familial_relationship that has input x and family and returns NEGATIVE if the intersection between family and the set of between_tokens field of x has a length bigger than 0, otherwise ABSTAIN",
+    "snippet": "@labeling_function()\ndef lf_familial_relationship(x, family):\n    return NEGATIVE if len(family.intersection(set(x.between_tokens))) > 0 else ABSTAIN"
+  },
+  {
+    "intent": "Write a function that shall return SEA-RELATED if 'shark' is in the lowercased field named text of input variable x, otherwise ABSTAIN",
+    "snippet": "@labeling_function()\ndef shark(x):\n    return SEA-RELATED if 'shark' in x.text.lower() else ABSTAIN"
+  },
+  {
+    "intent": "Return a label of SEA-RELATED if 'shark' in the lowercased text, otherwise ABSTAIN",
+    "snippet": "@labeling_function()\ndef shark(x):\n    return SEA-RELATED if 'shark' in x.text.lower() else ABSTAIN"
+  },
+  {
+    "intent": "write me a function  called snorkel that takes an input x and returns SNORKELLING if the word 'snorkel' is in lowercased x else SKIP",
+    "snippet": "@labeling_function()\ndef snorkel(x):\n  return SNORKELLING if 'snorkel' in x.text.lower() else SKIP"
+  },
+  {
+    "intent": "define a function that accepts text as argument and returns SURFING if the word surfboard is in the lowercased text string, otherwise SKIP",
+    "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+  },
+  {
+    "intent": "If 'surfboard' is is in lowercased text, return SURFING, otherwise return SKIP",
+    "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+  },
+  {
+    "intent": "I need a function that takes as argument a text variable text and it checks if 'surfboard' is in text. If it is, it returns SURFING, otherwise it returns SKIP.",
+    "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+  },
+  {
+    "intent": "write me a function that takes an argument x and if the word 'surfboard' is in lowercased x it returns the label SURFING. Otherwise it should return the label SKIP",
+    "snippet": "@labeling_function()\ndef surfboard(x):\n  return SURFING if 'surfboard' in x.lower() else SKIP"
+  },
+  {
+    "intent": "Give list of lists of all the findings of the regex pattern \"expression\" in the string \"clause\", for every string \"clause\" in the splited by \"/n\" string, called \"clauses\"",
+    "snippet": "[re.findall(pattern, clause) for clause in clauses.split('\\\\n')]"
+  },
+  {
+    "intent": "Find all the tuples of word and pos tags in test if pos is a noun",
+    "snippet": "[word for word, pos in test.pos() if pos == 'NN']"
+  },
+  {
+    "intent": "Find the word-pos tuples in \"test\" if pos equals \"NN\"",
+    "snippet": "[word for word, pos in test.pos() if pos == 'NN']"
+  },
+  {
+    "intent": "Assign a collection of bigram association measures in a variable called \"bigram_measures\"",
+    "snippet": "bigram_measures = nltk.collocations.BigramAssocMeasures()"
+  },
+  {
+    "intent": "Assing in a variable called \"bigram_measures\" nltk collection of bigram association measures",
+    "snippet": "bigram_measures = nltk.collocations.BigramAssocMeasures()"
+  },
+  {
+    "intent": "Train the NaiveBayesClassifier classifier named nbc with the \"feauter_set\" and assign it in a variable called \"classifier\"",
+    "snippet": "classifier = nbc.train(feature_set)"
+  },
+  {
+    "intent": "Classify the text \"This is an amazing library!\"",
+    "snippet": "classifier.classify('This is an amazing library!')"
+  },
+  {
+    "intent": "Classify the sentence feautures assigned in the variable called \"featurized_test_sentence\"",
+    "snippet": "classifier.classify(featurized_test_sentence)"
+  },
+  {
+    "intent": "Classify the sentence features assigned in the variable called \"test_sent_features\"",
+    "snippet": "classifier.classify(test_sent_features)"
+  },
+  {
+    "intent": "Print in console the most informative features of your classifier",
+    "snippet": "classifier.show_most_informative_features()"
+  },
+  {
+    "intent": "Train the classifier called clf",
+    "snippet": "clf.fit(X_train, y_train)"
+  },
+  {
+    "intent": "Tokenize the text \"x.txt\" using \"utf-8-sig\" encoding",
+    "snippet": "codecs.open('x.txt', 'r', 'utf-8-sig').read()"
+  },
+  {
+    "intent": "Create a nltk text from the corpus0.words() and assign it in a variable called \"corpus\"",
+    "snippet": "corpus = nltk.Text(corpus0.words())"
+  },
+  {
+    "intent": "define a function drug disease relation that takes a sentence as input and returns DRUG_DISEASE if the subject in the sentence is of type DRUG and the object is of type DISEASE, otherwise return ABSTAIN",
+    "snippet": "def drug_disease(sentence):\n    import spacy\n    nlp = spacy.load(\"en\")\n    doc = nlp(sentence)\n    subj_label = [ent.label_ for token, ent in zip(doc, doc.ents) if token.dep_=='nsubj']\n    obj_label = [ent.label_ for token,ent in zip(doc, doc.ents) if token.dep.contains('obj')]\n    if subj_label == 'DRUG' or obj_label == 'DISEASE':\n        return DRUG_DISEASE\n    else:\n        return ABSTAIN"
+  },
+  {
+    "intent": "define a function is_drug that takes a sentence as input, tokenizes it and and returns the list of tokens that end with either \u2018cycline\u2019 or \u2018zepam\u2019. If no token is found, return None",
+    "snippet": "def is_drug(sentence):\n    tokens = nltk.word_tokenize(sentence)\n    return [token for token in tokens if token.endswith('cycline') or token.endswith('zepam')]"
+  },
+  {
+    "intent": "define a function is_rotein that takes a text as input, tokenizes it and and returns the list of tokens that end with either \u2018ase\u2019 or \u2018in\u2019. If no token is found, return None",
+    "snippet": "def is_rotein(text):\n    tokens = nltk.word_tokenize(text)\n    return [token for token in tokens if token.endswith('ase') or token.endswith('in')]"
+  },
+  {
+    "intent": "define a function treatment  that takes a sentence as input and returns TREAT if the verb in the sentence is either \u2018treat\u2019 or \u2018prevent\u2019, otherwise ABSTAIN",
+    "snippet": "def treatment(sentence):\n    import spacy\n    nlp = spacy.load(\"en\")\n    doc = nlp(sentence)\n    verb = [token.text for token in doc if token.dep_=='ROOT']\n    if verb == 'treat' or verb == 'prevent':\n        return TREAT\n    else:\n        return ABSTAIN"
+  },
+  {
+    "intent": "Find which access points are defined in the nltk",
+    "snippet": "dir(nltk.corpus)"
+  },
+  {
+    "intent": "Remove \"word\" from \"filtered_word_list\"",
+    "snippet": "filtered_word_list.remove(word)"
+  },
+  {
+    "intent": "Remove ngrams which have frequency less than 2 on a BigramCollocationFinder variable named \"finder1\" and then assign a collection of bigram association measures in a variable called \"bigram_measures\"",
+    "snippet": "finder1.apply_freq_filter(2)\\nbigram_measures = nltk.collocations.BigramAssocMeasures()"
+  },
+  {
+    "intent": "Print in console every name and every lemmatized name that you find in the list of the synonyms of the word \"small\"",
+    "snippet": "for ss in wn.synsets('small'):\\n     print(ss.name(), ss.lemma_names())\\n"
+  },
+  {
+    "intent": "Find all the words in brown corpus, lowercase them, build a frequency table of those words and assign it in a variable called \"freqs\"",
+    "snippet": "freqs = nltk.FreqDist(w.lower() for w in brown.words())"
+  },
+  {
+    "intent": "Import all from nltk collocations module",
+    "snippet": "from nltk.collocations import *"
+  },
+  {
+    "intent": "Import everything from nltk collocations",
+    "snippet": "from nltk.collocations import *"
+  },
+  {
+    "intent": "Import brown corpus from nltk.copus module",
+    "snippet": "from nltk.corpus import brown"
+  },
+  {
+    "intent": "Import the cess_esp from nltk.corpus module and use it as cess",
+    "snippet": "from nltk.corpus import cess_esp as cess"
+  },
+  {
+    "intent": "Import stopwords from nltk.corpus module",
+    "snippet": "from nltk.corpus import stopwords"
+  },
+  {
+    "intent": "Import wordnet as wn from the ntlk corpus module",
+    "snippet": "from nltk.corpus import wordnet as wn"
+  },
+  {
+    "intent": "Get the sets of synonyms of the term \"gift\"",
+    "snippet": "g = wordnet.synset('gift.n.01')"
+  },
+  {
+    "intent": "Import nltk library",
+    "snippet": "import nltk"
+  },
+  {
+    "intent": "Import ntlk module",
+    "snippet": "import nltk"
+  },
+  {
+    "intent": "Show me how many pronouns are in the sentence",
+    "snippet": "len([phrase for phrase in nltk.Chunker(sentence) if phrase[1] == 'VP'])"
+  },
+  {
+    "intent": "Give me the number of the pronouns in the sentence",
+    "snippet": "len([phrase for phrase in nltk.Chunker(sentence) if phrase[1] == 'VP'])"
+  },
+  {
+    "intent": "Evaluate the probability of the word 'spain' in the context of ['rain', 'in'] of the language model lm",
+    "snippet": "lm.prob('spain', ['rain', 'in'])"
+  },
+  {
+    "intent": "Modify the nltk path to 'home/yourusername/whateverpath/'",
+    "snippet": "nltk.data.path.append('/home/yourusername/whateverpath/')"
+  },
+  {
+    "intent": "Append \"/libs/nltk_data/\" to nltk data path",
+    "snippet": "nltk.data.path.append('/libs/nltk_data/')"
+  },
+  {
+    "intent": "Download all nltk data",
+    "snippet": "nltk.download('all')"
+  },
+  {
+    "intent": "Download the tagger called \"averaged_perception_tagger\" for nltk",
+    "snippet": "nltk.download('averaged_perceptron_tagger')"
+  },
+  {
+    "intent": "Download the nltk package called \"averaged_perception_tagger\"",
+    "snippet": "nltk.download('averaged_perceptron_tagger')"
+  },
+  {
+    "intent": "Download nltk default taggers",
+    "snippet": "nltk.download('maxent_treebank_pos_tagger')"
+  },
+  {
+    "intent": "Download all the packages of nltk",
+    "snippet": "nltk.download()"
+  },
+  {
+    "intent": "Call the java executable on the 'C:/Program Files/Java/jdk1.6.0_30/bin/java.exe' directory ",
+    "snippet": "nltk.internals.config_java('C:/Program Files/Java/jdk1.6.0_30/bin/java.exe')"
+  },
+  {
+    "intent": "Lemmatize the verb \"loving\" using the wordnet lemmatizer",
+    "snippet": "nltk.stem.WordNetLemmatizer().lemmatize('loving', 'v')"
+  },
+  {
+    "intent": "Split the text into sentences",
+    "snippet": "nltk.tokenize.sent_tokenize(text)"
+  },
+  {
+    "intent": "Give me a sentence-tokenized copy of text",
+    "snippet": "nltk.tokenize.sent_tokenize(text)"
+  },
+  {
+    "intent": "Split in words the text 'Hello, world. How are you?'",
+    "snippet": "nltk.tokenize.word_tokenize('Hello, world. How are you?')"
+  },
+  {
+    "intent": "Get the tokens from the phrase 'Hello, world.'",
+    "snippet": "nltk.tokenize.word_tokenize('Hello, world.')"
+  },
+  {
+    "intent": "Split in word tokens the phrase \"I've found a medicine for my disease\"",
+    "snippet": "nltk.word_tokenize(\"I've found a medicine for my disease.\")\""
+  },
+  {
+    "intent": "Tokenize the sentence \"I've found a medicine for my disease\"",
+    "snippet": "nltk.word_tokenize(\"I've found a medicine for my disease.\")\""
+  },
+  {
+    "intent": "Open the file \"x.txt\" in read mode and read it using \"utf-8\" encoding",
+    "snippet": "open('x.txt', 'r').read().decode('utf-8')"
+  },
+  {
+    "intent": "Print the splitted sentences of text while preserving the quotations",
+    "snippet": "print(' '.join(tokenizer.tokenize(text, realign_boundaries=True)))"
+  },
+  {
+    "intent": "Print in console the scikit-learn version",
+    "snippet": "print('The scikit-learn version is {}.'.format(sklearn.__version__))"
+  },
+  {
+    "intent": "Print in console the string \"tag: \" and the result of the classification of the \"featurized_test_sentence\"",
+    "snippet": "print('tag:', classifier.classify(featurized_test_sentence))"
+  },
+  {
+    "intent": "Print the evaluation of the word \"b\" in the context of the tokenized sentence \"generates a\" of the language model lm",
+    "snippet": "print(lm.prob('b', 'generates a'.split()))"
+  },
+  {
+    "intent": "Check which corpora you have in nltk",
+    "snippet": "print(os.listdir(nltk.data.find('corpora')))"
+  },
+  {
+    "intent": "Call PlaintextCorpusReader with the parameter encoding='utf-8' and assign it in a variable called \"ptcr\"",
+    "snippet": "ptcr = nltk.corpus.PlaintextCorpusReader(Corpus, '.*', encoding='utf-8')"
+  },
+  {
+    "intent": "Find all occurances of the \"pattern\" in the \"clause\" string",
+    "snippet": "re.findall(pattern, clause)"
+  },
+  {
+    "intent": "Split in words the string \"paragraph\" and assign it in a variable called \"sentences\"",
+    "snippet": "sentences = tokenizer.tokenize(paragraph)"
+  },
+  {
+    "intent": "Give the lemma names for every name in synonyms",
+    "snippet": "set(chain.from_iterable([word.lemma_names() for word in synonyms]))"
+  },
+  {
+    "intent": "Insert the item \"nltkandyaml.mod\" in the 0 position of the list that specifies the search path for modules",
+    "snippet": "sys.path.insert(0, 'nltkandyaml.mod')"
+  },
+  {
+    "intent": "Create an nltk UnigramTagger tusing the \"model\" as model and the \"default_tagger\" as backoff and assign it in a variable called \"tagger\"",
+    "snippet": "tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)"
+  },
+  {
+    "intent": "Tag the tokens \"select\", \"the\" and \"files\" with its part of speech",
+    "snippet": "tagger.tag(['select', 'the', 'files'])"
+  },
+  {
+    "intent": "Create a nltk text from the tokens and assign it in a variable called text",
+    "snippet": "text = nltk.Text(tokens)"
+  },
+  {
+    "intent": "Split in words the phrase \"And now for something comletely different\" and assign it in a variable called \"text\"",
+    "snippet": "text = nltk.word_tokenize('And now for something completely different')"
+  },
+  {
+    "intent": "Split in words the \"sentence\" and assign it in a variable called \"tokens\"",
+    "snippet": "tokens = nltk.word_tokenize(sentence)"
+  },
+  {
+    "intent": "Tokenize the \"sentence\" and save it in a \"tokens\" variable",
+    "snippet": "tokens = nltk.word_tokenize(sentence)"
+  },
+  {
+    "intent": "Convert all ngrams between 1 and 4 to a matrix of tokens counts and assign them in a variable called \"vect\"",
+    "snippet": "vect = CountVectorizer(ngram_range=(1, 4))"
+  },
+  {
+    "intent": "Use wordnet as \"wn\" and look for synonyms of the word 'small'",
+    "snippet": "wn.synsets('small')"
+  },
+  {
+    "intent": "Find the synonyms of the word \"donation\"",
+    "snippet": "wordnet.synsets('donation')"
+  },
+  {
+    "intent": "Look for synonyms of the word \"donations\"",
+    "snippet": "wordnet.synsets('donations')"
+  },
+  {
+    "intent": "Find the synonyms of the word donations",
+    "snippet": "wordnet.synsets('donations')"
+  },
+  {
+    "intent": "Search for the synonyms of the word 'donations'",
+    "snippet": "wordnet.synsets('donations')"
+  },
+  {
+    "intent": "Split in words the text 'The black cat sat on a tree'",
+    "snippet": "nltk.tokenize.word_tokenize('The black cat sat on a tree')"
+  },
+  {
+    "intent": "Split the sentence 'Hello, world.'",
+    "snippet": "nltk.tokenize.word_tokenize('Hello, world.')"
+  },
+  {
+    "intent": "Use wordnet as \"wordnet\" and look for synonyms of the word 'elegant'",
+    "snippet": "wordnet.synsets('elegant')"
+  },
+  {
+    "intent": "Fit a classifier called clf",
+    "snippet": "clf.fit(X_train, y_train)"
+  },
+  {
+    "intent": "get the number of verbs in sent",
+    "snippet": "len([phrase for phrase in nltk.Chunker(sent) if phrase[1] == 'VP'])"
+  },
+  {
+    "intent": "Give me the number of the verbs in the text",
+    "snippet": "len([phrase for phrase in nltk.Chunker(text) if phrase[1] == 'VP'])"
+  },
+  {
+    "intent": "Give me the probability of the word 'uk' in the context of ['sun', 'in'] of the language model lm",
+    "snippet": "lm.prob('uk', ['sun', 'in'])"
+  },
+  {
+    "intent": "Split a piece of text into sentences",
+    "snippet": "nltk.tokenize.sent_tokenize(piece of text)"
+  },
+  {
+    "intent": "define a function cause  that takes a sentence as input and returns CAUSE if the verb in the sentence is either \u2018cause\u2019 or \u2018induce\u2019, otherwise False",
+    "snippet": "def cause(sentence):\n    import spacy\n    nlp = spacy.load('en')\n    doc = nlp(sentence)\n    verb = [token.text for token in doc if token.dep_=='ROOT']\n    if verb == 'cause' or verb == 'induce':\n        return CAUSE\n    else:\n        return False"
+  },
+  {
+    "intent": "Create a nltk text of the \"coded\" list of strings.",
+    "snippet": "words = nltk.Text(coded)"
+  }
+]

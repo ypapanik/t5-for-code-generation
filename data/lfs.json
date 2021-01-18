@@ -1,0 +1,774 @@
+[
+ {
+  "intent": "Join in a string with a space between the words, all the values with key \"word\" you find, for every value within \"annotated_sent0['tokens']\" ",
+  "snippet": " \".join(token['word'] for token in annotated_sent0['tokens'])\""
+ },
+ {
+  "intent": "Set the proxy to 'http://proxy.example.com:3128'. The username of the proxy is \"anithas\" and the password of the proxy is \"asfaleia\"",
+  "snippet": " \"nltk.set_proxy('http://proxy.example.com:3128',('anithas', 'asfaleia'))\""
+ },
+ {
+  "intent": "Check if the word \"word\" occur in the brown corpus category news",
+  "snippet": "'word' in brown.words(categories='news')"
+ },
+ {
+  "intent": "define LF_action_help with argument text that returns TRUTH if LF_action_help is in ACTIONS otherwise return FAKE",
+  "snippet": "@labeling_function()\ndef LF_action_help(text):\n    return TRUTH if 'LF_action_help' in ACTIONS else FAKE"
+ },
+ {
+  "intent": "Write a function disaster_location with input text that returns TRUTH if 'LF_disaster_location' is in LOCATIONS, otherwise FAKE",
+  "snippet": "@labeling_function()\ndef LF_disaster_location(text):\n    return TRUTH if 'LF_disaster_location' in LOCATIONS else FAKE"
+ },
+ {
+  "intent": "define a function that accepts x as input and returns BASEBALL if the word bat is in the lowercased x string, otherwise SKIP",
+  "snippet": "@labeling_function()\ndef bat(x):\n  return BASEBALL if 'bat' in x.lower() else SKIP"
+ },
+ {
+  "intent": "If 'bat' is is in lowercased x, return BASEBALL, otherwise return SKIP",
+  "snippet": "@labeling_function()\ndef bat(x):\n  return BASEBALL if 'bat' in x.lower() else SKIP"
+ },
+ {
+  "intent": "I need a function that takes as input a text variable x and it checks if 'bat' is in x. If it is, it returns BASEBALL, otherwise it returns SKIP.",
+  "snippet": "@labeling_function()\ndef bat(x):\n  return BASEBALL if 'bat' in x.lower() else SKIP"
+ },
+ {
+  "intent": "write me a function that takes an argument x and if the word 'bat' is in lowercased x it returns the label BASEBALL. Otherwise it should return the label SKIP",
+  "snippet": "@labeling_function()\ndef bat(x):\n  return BASEBALL if 'bat' in x.lower() else SKIP"
+ },
+ {
+  "intent": "write me a function  called bat that takes an input x and returns BASEBALL if the word 'bat' is in lowercased x else SKIP",
+  "snippet": "@labeling_function()\ndef bat(x):\n  return BASEBALL if 'bat' in x.text.lower() else SKIP"
+ },
+ {
+  "intent": "Write a function that shall return SPAM if 'check' is in the lowercased field named text of input variable x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check(x):\n    return SPAM if 'check' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Return a label of SPAM if 'check' in the lowercased text, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check(x):\n    return SPAM if 'check' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "I want a function 'coral reef' that takes an input x and returns SEA-RELATED if coral reef is in the lowercased field text of x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SEA-RELATED if 'coral reef' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Return a label of SEA-RELATED if 'coral reef' in the lowercased field named text of input variable x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SEA-RELATED if 'coral reef' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Give me function whose name is coral reef and sees if the lowercased text field of the input variable x contains the word 'coral reef' in it. If yes, then it should return SEA-RELATED, outherwise it should return ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SEA-RELATED if 'coral reef' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "I want a function 'check out' that takes an input x and returns SPAM if check out is in the lowercased field text of x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SPAM if 'check out' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Return a label of SPAM if 'check out' in the lowercased field named text of input variable x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SPAM if 'check out' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Give me function whose name is check out and sees if the lowercased text field of the input variable x contains the word 'check out' in it. If yes, then it should return SPAM, outherwise it should return ABSTAIN",
+  "snippet": "@labeling_function()\ndef check_out(x):\n    return SPAM if 'check out' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "I'd like you to define a function that takes an input x and if x's field country code is 'BE'. then it will return BE, if it's NL it 'll return NL, otherwise it returns ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'BE':\n        return BE\n    elif x.country_code == 'NL':\n        return NL\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Write me a function called country_code that takes a variable x and if x's country code is equal to 'BE'. then return BE, if it's equal to NL return NL, otherwise return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'BE':\n        return BE\n    elif x.country_code == 'NL':\n        return NL\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "If x's country code is equal to 'BE'. then return BE, if it's equal to NL return NL, otherwise return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'BE':\n        return BE\n    elif x.country_code == 'NL':\n        return NL\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I need a function that takes an input x and if x.country code is equal to 'BE'. then it will return BE, if it's equal to NL it 'll return NL, otherwise it should return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'BE':\n        return BE\n    elif x.country_code == 'NL':\n     return NL\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I want a function that will take as input a variable x and if x's field country code is equal to 'BE'. then it will return BE, if it's equal to NL it 'll return NL, otherwise it should return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'BE':\n        return BE\n    elif x.country_code == 'NL':\n     return NL\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I'd like you to define a function that takes an input x and if x's field country code is 'DE'. then it will return DE, if it's GR it 'll return GR, otherwise it returns ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'DE':\n        return DE\n    elif x.country_code == 'GR':\n        return GR\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I want a function that will take as input a variable x and if x's field country code is equal to 'ES'. then it will return ES, if it's equal to RUS it 'll return RUS, otherwise it should return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'ES':\n        return ES\n    elif x.country_code == 'RUS':\n     return RUS\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "If x's country code is equal to 'FR'. then return FR, if it's equal to AU return AU, otherwise return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'FR':\n        return FR\n    elif x.country_code == 'AU':\n        return AU\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I need a function that takes an input x and if x.country code is equal to 'NO'. then it will return NO, if it's equal to SLO it 'll return SLO, otherwise it should return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'NO':\n        return NO\n    elif x.country_code == 'SLO':\n     return SLO\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Write me a function called country_code that takes a variable x and if x's country code is equal to 'US'. then return US, if it's equal to UK return UK, otherwise return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef country_code(x):\n    if x.country_code == 'US':\n        return US\n    elif x.country_code == 'UK':\n        return UK\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I need a function 'criminals' that takes x and gives back the result of 'select_against_homogenous_group' when given x and the string Criminal",
+  "snippet": "@labeling_function()\ndef criminals(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "I want a labeling function called 'criminals' that takes an argument x and returns the output of function 'select_against_homogenous_group' when given x and the string 'Criminal'",
+  "snippet": "@labeling_function()\ndef criminals(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "Write a function called 'criminals' that takes x as input and returns the output of function 'select_against_homogenous_group' when given x and the string 'Criminal' as arguments",
+  "snippet": "@labeling_function()\ndef criminals(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "A function with name 'criminals' and input x. It should give back the output of function select_against_homogenous_group when given as arguments the variable x and a list with an element 'Criminal'.",
+  "snippet": "@labeling_function()\ndef criminals(x):\n    return select_against_homogenous_group(x, ['Criminal'])"
+ },
+ {
+  "intent": "Define a function daf_in_parntes, that takes x and pattern1 as arguments and returns REF if the regex pattern1 is matched by x, or ABSTAIN otherwise.",
+  "snippet": "@labeling_function()\ndef daf_in_parntes(x):\n    result = re.match(pattern1, x)\n    if result:\n        return REF\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write me a labeling function 'daf_in_parntes', taking x as input and a regex patten pattern1 and returning REF if the regex pattern is matched by x or else ABSTAIN",
+  "snippet": "@labeling_function()\ndef daf_in_parntes(x):\n    result = re.match(pattern1, x)\n    if result:\n        return REF\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write me a labeling function 'daf_in_parntes', taking x as input and a regex patten pattern1 and returning REF if the regex pattern is matched in x and ABSTAIN in any other case.",
+  "snippet": "@labeling_function()\ndef daf_in_parntes(x):\n    result = re.match(pattern1, x)\n    if result:\n        return REF\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write me an LF called daf_in_parntes, taking an argument x and a regex pattern called pattern1 and returning REF if the regex pattern is matched in x or ABSTAIN otherwise",
+  "snippet": "@labeling_function()\ndef daf_in_parntes(x):\n    result = re.match(pattern1, x)\n    if result:\n        return REF\n    return ABSTAIN"
+ },
+ {
+  "intent": "I want a function with inputs x and divisor and return 0 if the x0 field of x has a remainder of 1 when divided with divisor and x1 field of x is larger than x3 field of x, otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef f(x: DataPoint, divisor: int) -> int:\n    # Abstain unless x0 is divisible by divisor.\n    return 0 if x.x0 % divisor == 1 and x.x1 > x.x3 else -1"
+ },
+ {
+  "intent": "Write me a labeling function fp10h with input x that returns FP if the tp2h and the tp3h functions return ABSTAIN when given x as input, otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp10h(x):\n    return FP if tp2h(x) == ABSTAIN and tp3h(x) == ABSTAIN\\\n        else ABSTAIN"
+ },
+ {
+  "intent": "Write me a function called fp10l taking x as input that returns FP if tp1l is equal to ABSTAIN otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp10l(x):\n    return FP if tp1l == ABSTAIN \\\n        else ABSTAIN"
+ },
+ {
+  "intent": "I want a function fp10m with x argument that returns FP if tp1h returns ABSTAIN when given x as input. In any other case return ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp10m(x):\n    return FP if tp1h(x) == ABSTAIN \\\n        else ABSTAIN"
+ },
+ {
+  "intent": "I want a function called fp11m with x input. It shall return FP if Sign is is x's field tracestring and a regex search with ",
+  "snippet": "@labeling_function()\ndef fp11m(x):\n    return FP if ('Sign' in x.tracestring and re.search('Sign.*Receive goods or services', x.tracestring, flags=re.I)) and ('Receive goods or services' in x.tracestring and 'Receive invoice' in x.tracestring) \\\n        else ABSTAIN"
+ },
+ {
+  "intent": "Write me a function fp12l with argument x that returns FP if 'Create PR' is at the beginning of x's tracestring field, when ignoring case. Otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp12l(x):\n    return FP if re.search('^Create PR', x.tracestring, flags=re.I) \\\n        else ABSTAIN"
+ },
+ {
+  "intent": "Write me a function fp13h with argument x that returns FP if both tp2h and tp3h functions return ABSTAIN when given x as input. Otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp13h(x):\n    return FP if tp2h(x) == ABSTAIN and tp3h(x) == ABSTAIN\\\n        else ABSTAIN"
+ },
+ {
+  "intent": "I want a labeling function fp1l with argument x that returns FP if 'Create PR, Approve PR' is in tracestring field of x and 'Approve PR,Create PO' is in tracestring field of x. Else ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp1l(x):\n    return FP if 'Create PR,Approve PR' in x.tracestring and 'Approve PR,Create PO' in x.tracestring \\\n            else ABSTAIN"
+ },
+ {
+  "intent": "I want a function called fp2l with argument x that will return FP if 'Create PR' is in the beginning of tracestring field of x, ignoring case, and 'Approve PR' is found exactly one time in tracestring field of x as well, ignoring case.",
+  "snippet": "@labeling_function()\ndef fp2l(x):\n    return FP if re.search('^Create PR', x.tracestring, flags=re.I) and re.search('Approve PR{1}', x.tracestring, flags=re.I)\\\n        else ABSTAIN"
+ },
+ {
+  "intent": "write a function fp6m with argument x, that returns FP if the output of function tp1h is ABSTAIN when given x. Otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef fp6m(x):\n    return FP if tp1h(x) == ABSTAIN \\\n        else ABSTAIN"
+ },
+ {
+  "intent": "write a function has_entities with input x that returns RELEVANT if the length of the set of the document_annotations of x is bigger than 1 otherwise return NOT_RELEVANT",
+  "snippet": "@labeling_function()\ndef has_entities(x):\n    return RELEVANT if len(set(x.document_annotations)) > 1 else NOT_RELEVANT"
+ },
+ {
+  "intent": "Return a label of HAM if the doc length is less than 100 words and any of the words are of entity type LOC",
+  "snippet": "@labeling_function()\ndef has_person(x):\n    if len(doc) < 100 and any([ent.label_ == 'LOC' for ent in doc.ents]):\n        return HAM\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Return a label of HAM if the doc length is less than 20 words and any of the words are of entity type PERSON",
+  "snippet": "@labeling_function()\ndef has_person(x):\n    if len(doc) < 20 and any([ent.label_ == 'PERSON' for ent in doc.ents]):\n        return HAM\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "a function has_person_nlp with input x that returns HAM if length of the doc field of x is bigger than 100 and any of the entities in the entities fields of doc field of x have a label equal to 'LOC'. Otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_person_nlp(x):\n    if len(x.doc) < 100 and any([ent.label_ == 'LOC' for ent in x.doc.ents]):\n        return HAM\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "a function has_person_nlp with input x that returns HAM if length of the doc field of x is less than 20 and any of the entities in the entities fields of doc field of x have a label equal to 'PERSON'. Otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_person_nlp(x):\n    if len(x.doc) < 20 and any([ent.label_ == 'PERSON' for ent in x.doc.ents]):\n        return HAM\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "I want a function 'has treatment' with argument x that returns RELEVANT if 'treats' or 'indicates' is is the relationships_list field of x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_treatment(x):\n    return RELEVANT if 'treats' in x.relationships_list or 'indicates' in x.relationships_list else ABSTAIN"
+ },
+ {
+  "intent": "I need a function called has_type_bacs with input x that returns RELEVANT if the field d type bacs of x is greater than zero, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_bacs(x):\n    return RELEVANT if x.d_typ_bacs > 0 else ABSTAIN"
+ },
+ {
+  "intent": "I want a function has_type_bhvr with argument x that returns RELEVANT if the field d_typ_bhvr is greater than 0 otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_bhvr(x):\n    return RELEVANT if x.d_typ_bhvr > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function called has_type_chem with argument x that returns RELEVANT if the field d_typ_chem is greater than zero else ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_chem(x):\n    return RELEVANT if x.d_typ_chem > 0 else ABSTAIN"
+ },
+ {
+  "intent": "Write has_type_diap with argument x that returns RELEVANT if the field d_typ_diap of x is greater than zero, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_diap(x):\n    return RELEVANT if x.d_typ_diap > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function called has_type_diap_medd_or_bhvr with argument x that gives back RELEVANT if the field d_typ_diap of x or the field d_typ_medd of x or the field d_typ_bhvr of x is bigger than zero, otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_diap_medd_or_bhvr(x):\n    return RELEVANT if x.d_typ_diap > 0 or x.d_typ_medd > 0 or x.d_typ_bhvr > 0 else ABSTAIN"
+ },
+ {
+  "intent": "I want a function has_type_dora with argument x that returns RELEVANT if x's field d_typ_dora is bigger than zero, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_dora(x):\n    return RELEVANT if x.d_typ_dora > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function has_type_dsyn with input x that gives back RELEVANT if x's d_typ_dsyn is bigger than zero, else ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_dsyn(x):\n    return RELEVANT if x.d_typ_dsyn > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function has_type_dsyn_sosy with input x which returns RELEVANT if d_typ_dsyn field of x is greater than zero or d_typ_sosy field of x is greater than zero, else ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_dsyn_sosy(x):\n    return RELEVANT if x.d_typ_dsyn > 0 or x.d_typ_sosy > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function has_type_elii with x input that returns RELEVANT if d_typ_elii field of x is bigger than 0, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef has_type_elii(x):\n    return RELEVANT if x.d_typ_elii > 0 else ABSTAIN"
+ },
+ {
+  "intent": "A function called has votes with input x. It should first calculate total_votes as the sum of the fields document_number_votes_h, document_number_votes_s and document_number_votes_t of x, having first turned those on integers. Then it returns RELEVANT if total_votes is greater or equal than one, otherwise return NOT_RELEVANT",
+  "snippet": "@labeling_function()\ndef has_votes(x):\n    total_votes = int(x.document_number_votes_h) + int(x.document_number_votes_s) + int(x.document_number_votes_t)\n    return RELEVANT if total_votes >= 1 else NOT_RELEVANT"
+ },
+ {
+  "intent": "Define a function homeless taking x as input and returning the output of function select_against_homogenous_group when called with arguments x and a list with an element 'Homeless'",
+  "snippet": "@labeling_function()\ndef homeless(x):\n    return select_against_homogenous_group(x, ['Homeless'])"
+ },
+ {
+  "intent": "If the word is an adjective and it is equal to allelic return true else false",
+  "snippet": "@labeling_function()\ndef is_allelic(word):\n   if word[1] == 'JJ' and word[0] == 'allelic':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to card then return true else return false",
+  "snippet": "@labeling_function()\ndef is_card(word):\n   if word[1] == 'NN' and word[0] == 'card':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to change or if it is a noun plural and it's equal to changes then return true else return false",
+  "snippet": "@labeling_function()\ndef is_change(word):\n   if word[1] == 'NN' and word[0] == 'change' or word[1] == 'NNS' and word[0] == 'changes':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "define is doctor reply with input x that returns RELEVANT if the field document_is_doctor_reply of x is true or the field document_user_status of x is equal to Experienced User otherwise return NOT_RELEVANT",
+  "snippet": "@labeling_function()\ndef is_doctor_reply(x):\n    return RELEVANT if x.document_is_doctor_reply or x.document_user_status == 'Experienced User' else NOT_RELEVANT"
+ },
+ {
+  "intent": "If the word is a noun and it is either gene or allele then return true else return false",
+  "snippet": "@labeling_function()\ndef is_gene(word):\n   if word[1] == 'NN' and word[0] == 'gene' or word[0] == 'allele':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to insertion or if it is a noun plural and it's equal to insertions then return true else return false",
+  "snippet": "@labeling_function()\ndef is_insertion(word):\n   if word[1] == 'NN' and word[0] == 'insertion' or word[1] == 'NNS' and word[0] == 'insertions':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "define a function that checks if the input x is long, by first calculating the length of the field of document_text of x and then return RELEVANT if the text length is less than 1400, otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef is_long(x):\n    text_length = len(x.document_text)\n    return RELEVANT if text_length < 1400 else ABSTAIN"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to microdeletion or if it is a noun plural and it's equal to microdeletions then return true else return false",
+  "snippet": "@labeling_function()\ndef is_microdeletion(word):\n   if word[1] == 'NN' and word[0] == 'microdeletion' or word[1] == 'NNS' and word[0] == 'microdeletions':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to missense then return true else return false",
+  "snippet": "@labeling_function()\ndef is_missense(word):\n   if word[1] == 'NN' and word[0] == 'missense':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to mutation or if it is a noun plural and it's equal to mutations then return true else return false",
+  "snippet": "@labeling_function()\ndef is_mutation(word):\n   if word[1] == 'NN' and word[0] == 'mutation' or word[1] == 'NNS' and word[0] == 'mutations':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to nonsense then return true else return false",
+  "snippet": "@labeling_function()\ndef is_nonsense(word):\n   if word[1] == 'NN' and word[0] == 'nonsense':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun and it is equal to proband return true else return false",
+  "snippet": "@labeling_function()\ndef is_proband(word):\n   if word[1] == 'NN' and word[0] == 'proband':\n   return True\n   else:\n   return False"
+ },
+ {
+  "intent": "If the word is a noun plural form and it is equal to probands return true else return false ",
+  "snippet": "@labeling_function()\ndef is_proband(word):\n if word[1] == 'NNS' and word[0] == 'probands':\n return True\n else:\n return False"
+ },
+ {
+  "intent": "I need a function 'journalists' that takes x and gives back the result of 'select_against_homogenous_group' when given x and the string Criminal",
+  "snippet": "@labeling_function()\ndef journalists(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "I want a labeling function called 'journalists' that takes an argument x and returns the output of function 'select_against_homogenous_group' when given x and the string 'Criminal'",
+  "snippet": "@labeling_function()\ndef journalists(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "Write a function called 'journalists' that takes x as input and returns the output of function 'select_against_homogenous_group' when given x and the string 'Criminal' as arguments",
+  "snippet": "@labeling_function()\ndef journalists(x):\n    return select_against_homogenous_group(x, 'Criminal')"
+ },
+ {
+  "intent": "Look up term pair in Bio101. If it finds a subclass relation there it provides a SUBCLASS/SUPERCLASS label depending\n on term pair ordering. \n",
+  "snippet": "@labeling_function()\ndef kb_bio101_ds_element(cand, kb_bio101, kb_bio101_mapping):\n    return _kb_bio101_ds_positive(cand, kb_bio101, 'element', kb_bio101_mapping['element'])"
+ },
+ {
+  "intent": "Look up term pair in KB Bio101. If it finds a subclass relation there it provides a SUBCLASS/SUPERCLASS label depending on term pair ordering.",
+  "snippet": "@labeling_function()\ndef kb_bio101_ds_has_part(cand, kb_bio101, kb_bio101_mapping):\n    return _kb_bio101_ds_positive(cand, kb_bio101, 'has-part', kb_bio101_mapping['has-part'])"
+ },
+ {
+  "intent": "Looks up term pair KB Bio101 knowledge base manually built on the first 10 chapters of Life\n Biology. If it finds a subclass relation there it provides a SUBCLASS/SUPERCLASS label depending\n on term pair ordering. If it finds both terms in the KB, but there is subclass relation it is\n give a non-taxonomic label.\n",
+  "snippet": "@labeling_function()\ndef kb_bio101_ds_negative(cand, kb_bio101, kb_terms, kb_bio101_mapping):\n    return _kb_bio101_ds_negative(cand, kb_bio101, kb_terms, kb_bio101_mapping)"
+ },
+ {
+  "intent": "Return label if any of the words from the keywords list is in the lowercased text, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef keyword_lookup(text, keywords, label):\n    if any(word in text.lower() for word in keywords):\n        return label\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write a labeling function that takes text, keywords and label as arguments and returns label if any of the words in the keyword list are in the lowercased text. Otherwise return ABSTAIN.",
+  "snippet": "@labeling_function()\ndef keyword_lookup(text, keywords, label):\n    if any(word in text.lower() for word in keywords):\n        return label\n    return ABSTAIN"
+ },
+ {
+  "intent": "Return label if any of the words from the keyword list is in the lowercased text, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef keyword_lookup(x, keywords, label):\n    if any(word in x.text.lower() for word in keywords):\n        return label\n    return ABSTAIN"
+ },
+ {
+  "intent": "A function with name 'lawyers' and input x. It should give back the output of function select_against_homogenous_group when given as arguments the variable x and a list with an element 'Criminal'.",
+  "snippet": "@labeling_function()\ndef lawyers(x):\n    return select_against_homogenous_group(x, ['Criminal'])"
+ },
+ {
+  "intent": "write a function about marriage with input x that returns ADULT if the lowercased msg field of x contains either of: marriage, husband, wife, fiancee, fiance, divorce, son, daughter, pregnant, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_about_marriage(x):\nr   return ADULT if re.search('(marriage)|(husband)|(wife)|(fiancee)|(fiance)|(divorce)|(son)|(daughter)|(pregnant)|(pregnancy)', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "Write a function lf_acquisition with arguments row and acquisition that iterates over term in acquisition and if term is in the tag field 'sentence' of row return NEGATIVE otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_acquisition(row, acquisition):\n    for term in acquisition:\n        if term in row['sentence']:\n            return NEGATIVE\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write a function called lf_carry_subject with input x that checks if the object category field of x is equal to person and if the subject_category field of x is one of the following: 'chair', 'bike', 'snowboard', 'motorcycle', 'horse'. If these are both true it returns CARRY otherwise it returns ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_carry_subject(x):\n    if x.object_category == 'person':\n        if x.subject_category in ['chair', 'bike', 'snowboard', 'motorcycle', 'horse']:\n            return CARRY\n    return ABSTAIN"
+ },
+ {
+  "intent": "A function with a name lf_competition and arguments row and competition that checks for every term in competition if that term is in the sentnece tag field of row. If that is true it returns NEGATIVE otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_competition(row, competition):\n    for term in competition:\n        if term in row['sentence']:\n            return NEGATIVE\n    return ABSTAIN"
+ },
+ {
+  "intent": "Write me a function lf_contains_adult_age with input x that returns ADULT if the lowercased msg field of x is matching the regular expression I, followed by am or 'm, followed by just or only and then an age greater than 18 years old. Otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_adult_age(x):\n    return ADULT if re.search('i((\u2019|\\')m| am)( just| only|( just)? a)? (1[89]|[23456789]\\d)((year(s)? old)|\\.|$| )?', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "I want a function lf_contains_bible_name with input x that iterates over the elements of Bnames and if a lowercased element of Bnames is in the lowercased text field of x, it will return RELIGIOUS. Otherwise it will return ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_bible_name(x):\n  for n in Bnames:\n    if str(n).lower() in str(x.text).lower():\n      return RELIGIOUS\n  return ABSTAIN"
+ },
+ {
+  "intent": "Write me a function lf_contains_boy_girl with input x that will return KID if either boy or girl are in the lowercased msg field of x. Otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_boy_girl(x):\n    return KID if re.search('(boy)|(girl)', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "A function called lf_contains_catholicism that takes an argument x and iterates over Cathterms and if one of the lowercased terms of Cathterms is in the lowercased text field of x it returns RELIGIOUS otherwise it should ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_catholicism(x):\n  for n in Cathterms:\n    if n.lower() in str(x.text).lower():\n      return RELIGIOUS\n  return ABSTAIN"
+ },
+ {
+  "intent": "Write me a function lf_contains_date_parser with x input that takes the text field of x, makes it a string and strips any trailing characters and then tries to parse the resulting string as a date. If it is successful it should return DATE, if it raises an exception it returns ABSTAIN.",
+  "snippet": "@labeling_function()\ndef lf_contains_date_parser(x):\n    temp = str.strip(str(x.text))\n    try:\n        datetime.datetime.strptime(temp, '%m/%d/%Y')\n        dateutil.parser.parse(temp).strftime('%m/%d/%Y')\n        return DATE\n    except:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Write me an lf contains family memb that takes input x and returns KID if the lowercased text field of x has either brother, sister, mom, mother, dad or father otherwise it returns ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_family_memb(x):\n    return KID if re.search('(brother)|(sister)|(mom)|(mother)|(dad)|(father)', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "Write me a function that checks if an input x contains first name. It should first make the text field of x as a string and then if the string is not empty it checks if the first letter is upper case and if the output of m.search_first_name when given the string is true. If yes, return PERSON_NAME otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_first_name(x):\n    temp = str(x.text)\n    if len(temp)>0:\n        if temp[0].isupper() & m.search_first_name(temp):\n            return PERSON_NAME\n        else:\n            return ABSTAIN\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Return a label of SPAM if 'http' in comment text, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_link(x):\n    return SPAM if 'http' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Write a function that takes an input x and checks if the lowercased field of x contains middle or high school in which case it returns KID, otherwise ABSTAIN.",
+  "snippet": "@labeling_function()\ndef lf_contains_mid_high_school(x):\n    return KID if re.search('((high)|(middle)) school', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "Write a function contains parents that gets an input x and returns KID if either parents or family are in the lowercased msg field of x, otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_parents(x):\n    return KID if re.search('(parents)|(family)', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "A function that checks  ",
+  "snippet": "@labeling_function()\ndef lf_contains_quntity(x):\n    try:\n        x = str(x.text)\n        x = str.strip(x)\n        return NUMBER\n    except:\n        return ABSTAIN"
+ },
+ {
+  "intent": "check if the lowercased field msg of input x contains the word school in it. If yes return KID otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_school(x):\n    return KID if 'school' in x.msg.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Write a function lf_contains_teen with argument x that will return KID if either the word teen or teenager is in the lowercased msg field of x otherwise return ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_contains_teen(x):\n    return KID if re.search('(teen)|(teenager)', x.msg.lower()) else ABSTAIN"
+ },
+ {
+  "intent": "a function familial_relationship that has input x and family and returns NEGATIVE if the intersection between family and the set of between_tokens field of x has a length bigger than 0, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef lf_familial_relationship(x, family):\n    return NEGATIVE if len(family.intersection(set(x.between_tokens))) > 0 else ABSTAIN"
+ },
+ {
+  "intent": "Write a function that shall return SEA-RELATED if 'shark' is in the lowercased field named text of input variable x, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef shark(x):\n    return SEA-RELATED if 'shark' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "Return a label of SEA-RELATED if 'shark' in the lowercased text, otherwise ABSTAIN",
+  "snippet": "@labeling_function()\ndef shark(x):\n    return SEA-RELATED if 'shark' in x.text.lower() else ABSTAIN"
+ },
+ {
+  "intent": "write me a function  called snorkel that takes an input x and returns SNORKELLING if the word 'snorkel' is in lowercased x else SKIP",
+  "snippet": "@labeling_function()\ndef snorkel(x):\n  return SNORKELLING if 'snorkel' in x.text.lower() else SKIP"
+ },
+ {
+  "intent": "define a function that accepts text as argument and returns SURFING if the word surfboard is in the lowercased text string, otherwise SKIP",
+  "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+ },
+ {
+  "intent": "If 'surfboard' is is in lowercased text, return SURFING, otherwise return SKIP",
+  "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+ },
+ {
+  "intent": "I need a function that takes as argument a text variable text and it checks if 'surfboard' is in text. If it is, it returns SURFING, otherwise it returns SKIP.",
+  "snippet": "@labeling_function()\ndef surfboard(text):\n  return SURFING if 'surfboard' in text.lower() else SKIP"
+ },
+ {
+  "intent": "write me a function that takes an argument x and if the word 'surfboard' is in lowercased x it returns the label SURFING. Otherwise it should return the label SKIP",
+  "snippet": "@labeling_function()\ndef surfboard(x):\n  return SURFING if 'surfboard' in x.lower() else SKIP"
+ },
+ {
+  "intent": "Give list of lists of all the findings of the regex pattern \"expression\" in the string \"clause\", for every string \"clause\" in the splited by \"/n\" string, called \"clauses\"",
+  "snippet": "[re.findall(pattern, clause) for clause in clauses.split('\\\\n')]"
+ },
+ {
+  "intent": "Find all the tuples of word and pos tags in test if pos is a noun",
+  "snippet": "[word for word, pos in test.pos() if pos == 'NN']"
+ },
+ {
+  "intent": "Find the word-pos tuples in \"test\" if pos equals \"NN\"",
+  "snippet": "[word for word, pos in test.pos() if pos == 'NN']"
+ },
+ {
+  "intent": "Assign a collection of bigram association measures in a variable called \"bigram_measures\"",
+  "snippet": "bigram_measures = nltk.collocations.BigramAssocMeasures()"
+ },
+ {
+  "intent": "Assing in a variable called \"bigram_measures\" nltk collection of bigram association measures",
+  "snippet": "bigram_measures = nltk.collocations.BigramAssocMeasures()"
+ },
+ {
+  "intent": "Train the NaiveBayesClassifier classifier named nbc with the \"feauter_set\" and assign it in a variable called \"classifier\"",
+  "snippet": "classifier = nbc.train(feature_set)"
+ },
+ {
+  "intent": "Classify the text \"This is an amazing library!\"",
+  "snippet": "classifier.classify('This is an amazing library!')"
+ },
+ {
+  "intent": "Classify the sentence feautures assigned in the variable called \"featurized_test_sentence\"",
+  "snippet": "classifier.classify(featurized_test_sentence)"
+ },
+ {
+  "intent": "Classify the sentence features assigned in the variable called \"test_sent_features\"",
+  "snippet": "classifier.classify(test_sent_features)"
+ },
+ {
+  "intent": "Print in console the most informative features of your classifier",
+  "snippet": "classifier.show_most_informative_features()"
+ },
+ {
+  "intent": "Train the classifier called clf",
+  "snippet": "clf.fit(X_train, y_train)"
+ },
+ {
+  "intent": "Tokenize the text \"x.txt\" using \"utf-8-sig\" encoding",
+  "snippet": "codecs.open('x.txt', 'r', 'utf-8-sig').read()"
+ },
+ {
+  "intent": "Create a nltk text from the corpus0.words() and assign it in a variable called \"corpus\"",
+  "snippet": "corpus = nltk.Text(corpus0.words())"
+ },
+ {
+  "intent": "define a function drug disease relation that takes a sentence as input and returns DRUG_DISEASE if the subject in the sentence is of type DRUG and the object is of type DISEASE, otherwise return ABSTAIN",
+  "snippet": "def drug_disease(sentence):\n    import spacy\n    nlp = spacy.load(\"en\")\n    doc = nlp(sentence)\n    subj_label = [ent.label_ for token, ent in zip(doc, doc.ents) if token.dep_=='nsubj']\n    obj_label = [ent.label_ for token,ent in zip(doc, doc.ents) if token.dep.contains('obj')]\n    if subj_label == 'DRUG' or obj_label == 'DISEASE':\n        return DRUG_DISEASE\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "define a function is_drug that takes a sentence as input, tokenizes it and and returns the list of tokens that end with either \u2018cycline\u2019 or \u2018zepam\u2019. If no token is found, return None",
+  "snippet": "def is_drug(sentence):\n    tokens = nltk.word_tokenize(sentence)\n    return [token for token in tokens if token.endswith('cycline') or token.endswith('zepam')]"
+ },
+ {
+  "intent": "define a function is_rotein that takes a text as input, tokenizes it and and returns the list of tokens that end with either \u2018ase\u2019 or \u2018in\u2019. If no token is found, return None",
+  "snippet": "def is_rotein(text):\n    tokens = nltk.word_tokenize(text)\n    return [token for token in tokens if token.endswith('ase') or token.endswith('in')]"
+ },
+ {
+  "intent": "define a function treatment  that takes a sentence as input and returns TREAT if the verb in the sentence is either \u2018treat\u2019 or \u2018prevent\u2019, otherwise ABSTAIN",
+  "snippet": "def treatment(sentence):\n    import spacy\n    nlp = spacy.load(\"en\")\n    doc = nlp(sentence)\n    verb = [token.text for token in doc if token.dep_=='ROOT']\n    if verb == 'treat' or verb == 'prevent':\n        return TREAT\n    else:\n        return ABSTAIN"
+ },
+ {
+  "intent": "Find which access points are defined in the nltk",
+  "snippet": "dir(nltk.corpus)"
+ },
+ {
+  "intent": "Remove \"word\" from \"filtered_word_list\"",
+  "snippet": "filtered_word_list.remove(word)"
+ },
+ {
+  "intent": "Remove ngrams which have frequency less than 2 on a BigramCollocationFinder variable named \"finder1\" and then assign a collection of bigram association measures in a variable called \"bigram_measures\"",
+  "snippet": "finder1.apply_freq_filter(2)\\nbigram_measures = nltk.collocations.BigramAssocMeasures()"
+ },
+ {
+  "intent": "Print in console every name and every lemmatized name that you find in the list of the synonyms of the word \"small\"",
+  "snippet": "for ss in wn.synsets('small'):\\n     print(ss.name(), ss.lemma_names())\\n"
+ },
+ {
+  "intent": "Find all the words in brown corpus, lowercase them, build a frequency table of those words and assign it in a variable called \"freqs\"",
+  "snippet": "freqs = nltk.FreqDist(w.lower() for w in brown.words())"
+ },
+ {
+  "intent": "Import all from nltk collocations module",
+  "snippet": "from nltk.collocations import *"
+ },
+ {
+  "intent": "Import everything from nltk collocations",
+  "snippet": "from nltk.collocations import *"
+ },
+ {
+  "intent": "Import brown corpus from nltk.copus module",
+  "snippet": "from nltk.corpus import brown"
+ },
+ {
+  "intent": "Import the cess_esp from nltk.corpus module and use it as cess",
+  "snippet": "from nltk.corpus import cess_esp as cess"
+ },
+ {
+  "intent": "Import stopwords from nltk.corpus module",
+  "snippet": "from nltk.corpus import stopwords"
+ },
+ {
+  "intent": "Import wordnet as wn from the ntlk corpus module",
+  "snippet": "from nltk.corpus import wordnet as wn"
+ },
+ {
+  "intent": "Get the sets of synonyms of the term \"gift\"",
+  "snippet": "g = wordnet.synset('gift.n.01')"
+ },
+ {
+  "intent": "Import nltk library",
+  "snippet": "import nltk"
+ },
+ {
+  "intent": "Import ntlk module",
+  "snippet": "import nltk"
+ },
+ {
+  "intent": "Show me how many pronouns are in the sentence",
+  "snippet": "len([phrase for phrase in nltk.Chunker(sentence) if phrase[1] == 'VP'])"
+ },
+ {
+  "intent": "Give me the number of the pronouns in the sentence",
+  "snippet": "len([phrase for phrase in nltk.Chunker(sentence) if phrase[1] == 'VP'])"
+ },
+ {
+  "intent": "Evaluate the probability of the word 'spain' in the context of ['rain', 'in'] of the language model lm",
+  "snippet": "lm.prob('spain', ['rain', 'in'])"
+ },
+ {
+  "intent": "Modify the nltk path to 'home/yourusername/whateverpath/'",
+  "snippet": "nltk.data.path.append('/home/yourusername/whateverpath/')"
+ },
+ {
+  "intent": "Append \"/libs/nltk_data/\" to nltk data path",
+  "snippet": "nltk.data.path.append('/libs/nltk_data/')"
+ },
+ {
+  "intent": "Download all nltk data",
+  "snippet": "nltk.download('all')"
+ },
+ {
+  "intent": "Download the tagger called \"averaged_perception_tagger\" for nltk",
+  "snippet": "nltk.download('averaged_perceptron_tagger')"
+ },
+ {
+  "intent": "Download the nltk package called \"averaged_perception_tagger\"",
+  "snippet": "nltk.download('averaged_perceptron_tagger')"
+ },
+ {
+  "intent": "Download nltk default taggers",
+  "snippet": "nltk.download('maxent_treebank_pos_tagger')"
+ },
+ {
+  "intent": "Download all the packages of nltk",
+  "snippet": "nltk.download()"
+ },
+ {
+  "intent": "Call the java executable on the 'C:/Program Files/Java/jdk1.6.0_30/bin/java.exe' directory ",
+  "snippet": "nltk.internals.config_java('C:/Program Files/Java/jdk1.6.0_30/bin/java.exe')"
+ },
+ {
+  "intent": "Lemmatize the verb \"loving\" using the wordnet lemmatizer",
+  "snippet": "nltk.stem.WordNetLemmatizer().lemmatize('loving', 'v')"
+ },
+ {
+  "intent": "Split the text into sentences",
+  "snippet": "nltk.tokenize.sent_tokenize(text)"
+ },
+ {
+  "intent": "Give me a sentence-tokenized copy of text",
+  "snippet": "nltk.tokenize.sent_tokenize(text)"
+ },
+ {
+  "intent": "Split in words the text 'Hello, world. How are you?'",
+  "snippet": "nltk.tokenize.word_tokenize('Hello, world. How are you?')"
+ },
+ {
+  "intent": "Get the tokens from the phrase 'Hello, world.'",
+  "snippet": "nltk.tokenize.word_tokenize('Hello, world.')"
+ },
+ {
+  "intent": "Split in word tokens the phrase \"I've found a medicine for my disease\"",
+  "snippet": "nltk.word_tokenize(\"I've found a medicine for my disease.\")\""
+ },
+ {
+  "intent": "Tokenize the sentence \"I've found a medicine for my disease\"",
+  "snippet": "nltk.word_tokenize(\"I've found a medicine for my disease.\")\""
+ },
+ {
+  "intent": "Open the file \"x.txt\" in read mode and read it using \"utf-8\" encoding",
+  "snippet": "open('x.txt', 'r').read().decode('utf-8')"
+ },
+ {
+  "intent": "Print the splitted sentences of text while preserving the quotations",
+  "snippet": "print(' '.join(tokenizer.tokenize(text, realign_boundaries=True)))"
+ },
+ {
+  "intent": "Print in console the scikit-learn version",
+  "snippet": "print('The scikit-learn version is {}.'.format(sklearn.__version__))"
+ },
+ {
+  "intent": "Print in console the string \"tag: \" and the result of the classification of the \"featurized_test_sentence\"",
+  "snippet": "print('tag:', classifier.classify(featurized_test_sentence))"
+ },
+ {
+  "intent": "Print the evaluation of the word \"b\" in the context of the tokenized sentence \"generates a\" of the language model lm",
+  "snippet": "print(lm.prob('b', 'generates a'.split()))"
+ },
+ {
+  "intent": "Check which corpora you have in nltk",
+  "snippet": "print(os.listdir(nltk.data.find('corpora')))"
+ },
+ {
+  "intent": "Call PlaintextCorpusReader with the parameter encoding='utf-8' and assign it in a variable called \"ptcr\"",
+  "snippet": "ptcr = nltk.corpus.PlaintextCorpusReader(Corpus, '.*', encoding='utf-8')"
+ },
+ {
+  "intent": "Find all occurances of the \"pattern\" in the \"clause\" string",
+  "snippet": "re.findall(pattern, clause)"
+ },
+ {
+  "intent": "Split in words the string \"paragraph\" and assign it in a variable called \"sentences\"",
+  "snippet": "sentences = tokenizer.tokenize(paragraph)"
+ },
+ {
+  "intent": "Give the lemma names for every name in synonyms",
+  "snippet": "set(chain.from_iterable([word.lemma_names() for word in synonyms]))"
+ },
+ {
+  "intent": "Insert the item \"nltkandyaml.mod\" in the 0 position of the list that specifies the search path for modules",
+  "snippet": "sys.path.insert(0, 'nltkandyaml.mod')"
+ },
+ {
+  "intent": "Create an nltk UnigramTagger tusing the \"model\" as model and the \"default_tagger\" as backoff and assign it in a variable called \"tagger\"",
+  "snippet": "tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)"
+ },
+ {
+  "intent": "Tag the tokens \"select\", \"the\" and \"files\" with its part of speech",
+  "snippet": "tagger.tag(['select', 'the', 'files'])"
+ },
+ {
+  "intent": "Create a nltk text from the tokens and assign it in a variable called text",
+  "snippet": "text = nltk.Text(tokens)"
+ },
+ {
+  "intent": "Split in words the phrase \"And now for something comletely different\" and assign it in a variable called \"text\"",
+  "snippet": "text = nltk.word_tokenize('And now for something completely different')"
+ },
+ {
+  "intent": "Split in words the \"sentence\" and assign it in a variable called \"tokens\"",
+  "snippet": "tokens = nltk.word_tokenize(sentence)"
+ },
+ {
+  "intent": "Tokenize the \"sentence\" and save it in a \"tokens\" variable",
+  "snippet": "tokens = nltk.word_tokenize(sentence)"
+ },
+ {
+  "intent": "Convert all ngrams between 1 and 4 to a matrix of tokens counts and assign them in a variable called \"vect\"",
+  "snippet": "vect = CountVectorizer(ngram_range=(1, 4))"
+ },
+ {
+  "intent": "Use wordnet as \"wn\" and look for synonyms of the word 'small'",
+  "snippet": "wn.synsets('small')"
+ },
+ {
+  "intent": "Find the synonyms of the word \"donation\"",
+  "snippet": "wordnet.synsets('donation')"
+ },
+ {
+  "intent": "Look for synonyms of the word \"donations\"",
+  "snippet": "wordnet.synsets('donations')"
+ },
+ {
+  "intent": "Find the synonyms of the word donations",
+  "snippet": "wordnet.synsets('donations')"
+ },
+ {
+  "intent": "Search for the synonyms of the word 'donations'",
+  "snippet": "wordnet.synsets('donations')"
+ },
+ {
+  "intent": "Split in words the text 'The black cat sat on a tree'",
+  "snippet": "nltk.tokenize.word_tokenize('The black cat sat on a tree')"
+ },
+ {
+  "intent": "Split the sentence 'Hello, world.'",
+  "snippet": "nltk.tokenize.word_tokenize('Hello, world.')"
+ },
+ {
+  "intent": "Use wordnet as \"wordnet\" and look for synonyms of the word 'elegant'",
+  "snippet": "wordnet.synsets('elegant')"
+ },
+ {
+  "intent": "Fit a classifier called clf",
+  "snippet": "clf.fit(X_train, y_train)"
+ },
+ {
+  "intent": "get the number of verbs in sent",
+  "snippet": "len([phrase for phrase in nltk.Chunker(sent) if phrase[1] == 'VP'])"
+ },
+ {
+  "intent": "Give me the number of the verbs in the text",
+  "snippet": "len([phrase for phrase in nltk.Chunker(text) if phrase[1] == 'VP'])"
+ },
+ {
+  "intent": "Give me the probability of the word 'uk' in the context of ['sun', 'in'] of the language model lm",
+  "snippet": "lm.prob('uk', ['sun', 'in'])"
+ },
+ {
+  "intent": "Split a piece of text into sentences",
+  "snippet": "nltk.tokenize.sent_tokenize(piece of text)"
+ },
+ {
+  "intent": "define a function cause  that takes a sentence as input and returns CAUSE if the verb in the sentence is either \u2018cause\u2019 or \u2018induce\u2019, otherwise False",
+  "snippet": "def cause(sentence):\n    import spacy\n    nlp = spacy.load('en')\n    doc = nlp(sentence)\n    verb = [token.text for token in doc if token.dep_=='ROOT']\n    if verb == 'cause' or verb == 'induce':\n        return CAUSE\n    else:\n        return False"
+ },
+ {
+  "intent": "Create a nltk text of the \"coded\" list of strings.",
+  "snippet": "words = nltk.Text(coded)"
+ }
+]
