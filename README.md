@@ -1,6 +1,6 @@
 # Text-to-Text Transformers for Semantic Parsing
 This repository is used to finetune a T5 model on the task of semantic parsing, a.k.a. generating (Python) code out of natural language descriptions.
-For more details, please refer to the relevant paper.
+For more details, please refer to the relevant [paper](https://arxiv.org/pdf/2101.07138.pdf).
 
 ```
 @misc{papanikolaou2021teach,
