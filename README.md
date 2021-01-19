@@ -3,11 +3,13 @@ This repository is used to finetune a T5 model on the task of semantic parsing, 
 For more details, please refer to the relevant paper.
 
 ```
-@article{papanikolaou21,
-  title={Teach me how to Label: Labeling Functions from Natural Language with Text-to-text Transformers},
-  author={Yannis Papanikolaou},
-  journal={arXiv preprint arXiv:},
-  year={2021}
+@misc{papanikolaou2021teach,
+      title={Teach me how to Label: Labeling Functions from Natural Language with Text-to-text Transformers}, 
+      author={Yannis Papanikolaou},
+      year={2021},
+      eprint={2101.07138},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 Along with our code we include the relevant datasets used in the paper. The CoNaLa dataset, as well as the evaluation script are taken from the CoNaLa project website:
